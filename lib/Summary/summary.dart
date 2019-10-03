@@ -1,12 +1,17 @@
+import 'package:finpal/Dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_plaid/flutter_plaid.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
 import 'package:intl/intl.dart';
+import 'package:finpal/Loading/loading.dart';
 
 
 class FinPalSummary extends StatelessWidget {
+
+LoadingIndicator _loadingIndicator;
+BuildContext _buildContext;
 
 showPlaidView(BuildContext context) async {
     bool plaidSandbox = false;
@@ -24,11 +29,11 @@ showPlaidView(BuildContext context) async {
 
     FlutterPlaidApi flutterPlaidApi = FlutterPlaidApi(configuration);
     flutterPlaidApi.launch(context, (Result result) {
-      ///handle result
-      print(result);
-     fetchAccessToken(context, result.token);
-       
-      
+      fetchAccessToken(context, result.token);
+      _loadingIndicator =  LoadingIndicator();
+      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+        return _loadingIndicator.build(context);
+      }));
     });
   }
   
@@ -42,16 +47,10 @@ Future fetchAccessToken(BuildContext context, String publicToken) async {
   };
 
   final response =  await http.post('https://development.plaid.com/item/public_token/exchange', headers: { "content-type" : "application/json", "accept" : "application/json"}, body: json.encode(data));
-
-     // await http.get('https://jsonplaceholder.typicode.com/posts/1');
-
   if (response.statusCode == 200) {
      var decodedJson = json.decode(response.body);
      fetchTransactions(decodedJson['access_token'], context);
-    // If the call to the server was successful, parse the JSON.
-    //return Post.fromJson(json.decode(response.body));
   } else {
-    // If that call was not successful, throw an error.
     throw Exception('Failed to load post');
   }
 }
@@ -68,7 +67,23 @@ Future fetchTransactions(String accessToken, BuildContext context) async {
 
     if(response.statusCode == 200) {
       debugPrint("transactions" + response.body);
-      Navigator.pop(context);
+      fetchTransactionAnalysis(response.body, context);
+      
+    } else {
+
+    }
+}
+
+Future fetchTransactionAnalysis(dynamic responseStr, BuildContext context)  async {
+
+  final response = await http.post('https://finx-hacakthon.herokuapp.com/analysis', headers: { "content-type" : "application/json", "accept" : "application/json"},  body: responseStr);
+
+  if(response.statusCode == 200) {
+      debugPrint("returned transactional data" + response.body);
+       var dashBoard = Dashboard();
+       Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+        return dashBoard.build(context);
+      }));
     } else {
 
     }
@@ -77,6 +92,7 @@ Future fetchTransactions(String accessToken, BuildContext context) async {
 
  @override 
   Widget build(BuildContext context) {
+    _buildContext = context;
     return MaterialApp(
      home: Scaffold(
        appBar: AppBar(

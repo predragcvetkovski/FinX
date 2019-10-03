@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'Summary/summary.dart';
 import 'Dashboard.dart';
 
-void main() => runApp(FinPal());
+void main() => runApp(Dashboard());
 
 class FinPal extends StatelessWidget {
   // This widget is the root of your application.

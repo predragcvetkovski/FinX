@@ -12,17 +12,28 @@ class Dashboard extends StatelessWidget {
        appBar: AppBar(
          title: Text("Dashboard"),
         ),
-        body: Card(child: Column(
-          
+        body:  Column(
           children: <Widget>[
-          const ListTile(
-          leading: Icon(Icons.arrow_downward, size: 50,color: Colors.red,),
-          title: Text('Summary'),
-          subtitle: Text('300'),
-        ),
-        Text("Fee Related Loss:"),
-        Text("Purchasing power loss:"),
-        CarouselSlider(
+            Card(
+              child: Column(
+                children: <Widget>[
+                     const ListTile(
+                        title: Text('Summary'),
+                        subtitle: Text(''),
+                      ),
+                      const ListTile(
+                        leading: Icon(Icons.arrow_downward, size: 50,color: Colors.red,),
+                        title: Text('300'),
+                        subtitle: Text(''),
+                      ),
+                      Text("Fee Related Loss:"),
+                      Text("Purchasing power loss:"),
+                ],
+              )
+            ),
+        Card(
+          child: Column(children: <Widget>[
+              CarouselSlider(
           height: 400.0,
           items: [1,2].map((i) {
               if(i == 1) {
@@ -33,13 +44,14 @@ class Dashboard extends StatelessWidget {
                     margin: EdgeInsets.symmetric(horizontal: 5.0),
                     decoration: BoxDecoration(
                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(0.6)),
                        border: Border.all(color: Colors.grey,width: 0.6),
-                       boxShadow: [
-                            new BoxShadow(
-                                color: Colors.grey,
-                                offset: new Offset(20.0, 10.0),
-                              )
-                            ],
+                      //  boxShadow: [
+                      //       new BoxShadow(
+                      //           color: Colors.grey,
+                      //           offset: new Offset(20.0, 10.0),
+                      //         )
+                      //       ],
                     ),
                     child: Text('Switch bank',)
                   );
@@ -48,35 +60,34 @@ class Dashboard extends StatelessWidget {
               }
             else {
                return Builder(
-              builder: (BuildContext context) {
-                  return Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
-                    decoration: BoxDecoration(
-                       color: Colors.white,
-                       border: Border.all(color: Colors.grey,width: 0.6),
-                       boxShadow: [
-                            new BoxShadow(
-                                color: Colors.grey,
-                                offset: new Offset(20.0, 10.0),
-                              )
-                            ],
-                    ),
-                    child: Text('Swith to product')
+                      builder: (BuildContext context) {
+                        return Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: EdgeInsets.symmetric(horizontal: 5.0),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.all(Radius.circular(0.6)),
+                            border: Border.all(color: Colors.grey,width: 0.6),
+                              // boxShadow: [
+                              //     new BoxShadow(
+                              //      color: Colors.grey,
+                              //       offset: new Offset(20.0, 10.0),
+                              //     )
+                              // ],
+                          ),
+                          child: Text('Swith to product')
+                         );
+                        },
                   );
-                },
-              );
-            }
-
-          
-          }).toList(),
-        )],
+              }
+            }).toList(),
+          )]
+          )
+        ), 
+        ],
         ),
       ),
-     )
-    );
-
-
+     );
   }
 
 
