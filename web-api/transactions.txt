@@ -1,0 +1,403 @@
+{
+  "transactions": {
+    "accounts": [
+      {
+        "account_id": "Bp19kNQjEKtoLeRwEZVyUbQoqdP86EcwWLGJQ",
+        "balances": {
+          "available": 100,
+          "current": 110,
+          "iso_currency_code": "USD"
+        },
+        "mask": "0000",
+        "name": "Plaid Checking",
+        "official_name": "Plaid Gold Standard 0% Interest Checking",
+        "subtype": "checking",
+        "type": "depository"
+      },
+      {
+        "account_id": "33zdJVqR4XtgNM9jRE74sJRD7j51GVCqr8aNe",
+        "balances": {
+          "available": 200,
+          "current": 210,
+          "iso_currency_code": "USD"
+        },
+        "mask": "1111",
+        "name": "Plaid Saving",
+        "official_name": "Plaid Silver Standard 0.1% Interest Saving",
+        "subtype": "savings",
+        "type": "depository"
+      },
+      {
+        "account_id": "xa95KLPj1WUrXKgyPqdLinvGAdw4k6in7AEWv",
+        "balances": {
+          "current": 1000,
+          "iso_currency_code": "USD"
+        },
+        "mask": "2222",
+        "name": "Plaid CD",
+        "official_name": "Plaid Bronze Standard 0.2% Interest CD",
+        "subtype": "cd",
+        "type": "depository"
+      },
+      {
+        "account_id": "doj8ZepLv3FAkQMeW6gxTG7zXRLQ4oiZM63AQ",
+        "balances": {
+          "current": 410,
+          "iso_currency_code": "USD",
+          "limit": 2000
+        },
+        "mask": "3333",
+        "name": "Plaid Credit Card",
+        "official_name": "Plaid Diamond 12.5% APR Interest Credit Card",
+        "subtype": "credit card",
+        "type": "credit"
+      },
+      {
+        "account_id": "a1497JMZvrtXKMk4vNwzTdgRVqzMxDf7ae9G3",
+        "balances": {
+          "available": 43200,
+          "current": 43200,
+          "iso_currency_code": "USD"
+        },
+        "mask": "4444",
+        "name": "Plaid Money Market",
+        "official_name": "Plaid Platinum Standard 1.85% Interest Money Market",
+        "subtype": "money market",
+        "type": "depository"
+      },
+      {
+        "account_id": "4xBGZwKRNkuV5zg9EWbNcEoVqle59vhdr3xEL",
+        "balances": {
+          "current": 320.76,
+          "iso_currency_code": "USD"
+        },
+        "mask": "5555",
+        "name": "Plaid IRA",
+        "subtype": "ira",
+        "type": "investment"
+      },
+      {
+        "account_id": "NlmgPVGEvjtQwj365BkPSkWVaJ3jmpuWj71NA",
+        "balances": {
+          "current": 23631.9805,
+          "iso_currency_code": "USD"
+        },
+        "mask": "6666",
+        "name": "Plaid 401k",
+        "subtype": "401k",
+        "type": "investment"
+      },
+      {
+        "account_id": "PK9o7RqlvZi4bkAV5ExMhvMLaDZkGpi7kN4mL",
+        "balances": {
+          "current": 65262,
+          "iso_currency_code": "USD"
+        },
+        "mask": "7777",
+        "name": "Plaid Student Loan",
+        "subtype": "student",
+        "type": "loan"
+      }
+    ],
+    "item": {
+      "available_products": [
+        "assets",
+        "auth",
+        "balance",
+        "credit_details",
+        "identity",
+        "income",
+        "investments",
+        "liabilities"
+      ],
+      "billed_products": [
+        "transactions"
+      ],
+      "institution_id": "ins_4",
+      "item_id": "VdVrqox3vyf1ymBx5aQDsKRg86Aqb7fWmZrm1",
+      "webhook": ""
+    },
+    "request_id": "tvvhFiEwUUr5p5d",
+    "total_transactions": 16,
+    "transactions": [
+      {
+        "account_id": "Bp19kNQjEKtoLeRwEZVyUbQoqdP86EcwWLGJQ",
+        "amount": 6.33,
+        "category": [
+          "Travel",
+          "Car Service",
+          "Ride Share"
+        ],
+        "category_id": "22006001",
+        "date": "2019-10-01",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "Uber 072515 SF**POOL**",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "lbpdAglkxQt6Gpn7lq3KU47e5RAQm7iZ3ydoV",
+        "transaction_type": "special"
+      },
+      {
+        "account_id": "doj8ZepLv3FAkQMeW6gxTG7zXRLQ4oiZM63AQ",
+        "amount": 500,
+        "category": [
+          "Food and Drink",
+          "Restaurants"
+        ],
+        "category_id": "13005000",
+        "date": "2019-09-28",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "Tectra Inc",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "a1497JMZvrtXKMk4vNwzTdgR5r4LJgC7mqQ5M",
+        "transaction_type": "place"
+      },
+      {
+        "account_id": "doj8ZepLv3FAkQMeW6gxTG7zXRLQ4oiZM63AQ",
+        "amount": 2078.5,
+        "category": [
+          "Payment"
+        ],
+        "category_id": "16000000",
+        "date": "2019-09-27",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "AUTOMATIC PAYMENT - THANK",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "PK9o7RqlvZi4bkAV5ExMhvMLdnJz5Mt7lDW6E",
+        "transaction_type": "special"
+      },
+      {
+        "account_id": "doj8ZepLv3FAkQMeW6gxTG7zXRLQ4oiZM63AQ",
+        "amount": 500,
+        "category": [
+          "Food and Drink",
+          "Restaurants"
+        ],
+        "category_id": "13005000",
+        "date": "2019-09-27",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "KFC",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "NlmgPVGEvjtQwj365BkPSkWVZzdr5WcWJv56b",
+        "transaction_type": "place"
+      },
+      {
+        "account_id": "doj8ZepLv3FAkQMeW6gxTG7zXRLQ4oiZM63AQ",
+        "amount": 500,
+        "category": [
+          "Shops",
+          "Sporting Goods"
+        ],
+        "category_id": "19046000",
+        "date": "2019-09-27",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "Madison Bicycle Shop",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "4xBGZwKRNkuV5zg9EWbNcEoVRxJjWohdyeAbK",
+        "transaction_type": "place"
+      },
+      {
+        "account_id": "33zdJVqR4XtgNM9jRE74sJRD7j51GVCqr8aNe",
+        "amount": 25,
+        "category": [
+          "Payment",
+          "Credit Card"
+        ],
+        "category_id": "16001000",
+        "date": "2019-09-18",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "CREDIT CARD 3333 PAYMENT *//",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "33zdJVqR4XtgNM9jRE74sJRD4beWQRfqypnlr",
+        "transaction_type": "special"
+      },
+      {
+        "account_id": "Bp19kNQjEKtoLeRwEZVyUbQoqdP86EcwWLGJQ",
+        "amount": 5.4,
+        "category": [
+          "Travel",
+          "Car Service",
+          "Ride Share"
+        ],
+        "category_id": "22006001",
+        "date": "2019-09-18",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "Uber 063015 SF**POOL**",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "qKW9A5B3P1iBWRG6nbMxcELQzro8pLhdKa7rq",
+        "transaction_type": "special"
+      },
+      {
+        "account_id": "a1497JMZvrtXKMk4vNwzTdgRVqzMxDf7ae9G3",
+        "amount": 5850,
+        "category": [
+          "Transfer",
+          "Debit"
+        ],
+        "category_id": "21006000",
+        "date": "2019-09-17",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "ACH Electronic CreditGUSTO PAY 123456",
+        "payment_meta": {
+          "payment_method": "ACH"
+        },
+        "pending": false,
+        "transaction_id": "eg71w4oplxseGgXaj38dhreV38AQqeFLZN59r",
+        "transaction_type": "special"
+      },
+      {
+        "account_id": "xa95KLPj1WUrXKgyPqdLinvGAdw4k6in7AEWv",
+        "amount": 1000,
+        "category": [
+          "Transfer",
+          "Deposit"
+        ],
+        "category_id": "21007000",
+        "date": "2019-09-17",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "CD DEPOSIT .INITIAL.",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "doj8ZepLv3FAkQMeW6gxTG7zMmZKw7CZ1wQEK",
+        "transaction_type": "special"
+      },
+      {
+        "account_id": "doj8ZepLv3FAkQMeW6gxTG7zXRLQ4oiZM63AQ",
+        "amount": 78.5,
+        "category": [
+          "Recreation",
+          "Gyms and Fitness Centers"
+        ],
+        "category_id": "17018000",
+        "date": "2019-09-16",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "Touchstone Climbing",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "jG1P73AWBmUE9l6PAMzDUG1JELXdm1C1g5LWy",
+        "transaction_type": "place"
+      },
+      {
+        "account_id": "Bp19kNQjEKtoLeRwEZVyUbQoqdP86EcwWLGJQ",
+        "amount": -500,
+        "category": [
+          "Travel",
+          "Airlines and Aviation Services"
+        ],
+        "category_id": "22001000",
+        "date": "2019-09-16",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "United Airlines",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "KbGZPwEovNtXpZdW5kRyT6XN8j7R5XCVXPApB",
+        "transaction_type": "special"
+      },
+      {
+        "account_id": "Bp19kNQjEKtoLeRwEZVyUbQoqdP86EcwWLGJQ",
+        "amount": 12,
+        "category": [
+          "Food and Drink",
+          "Restaurants"
+        ],
+        "category_id": "13005000",
+        "date": "2019-09-15",
+        "iso_currency_code": "USD",
+        "location": {
+          "store_number": "3322"
+        },
+        "name": "McDonald's",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "rrA9wX3xkWtkGL5m39BdHQBAeV14JBIlRx6Jx",
+        "transaction_type": "place"
+      },
+      {
+        "account_id": "Bp19kNQjEKtoLeRwEZVyUbQoqdP86EcwWLGJQ",
+        "amount": 4.33,
+        "category": [
+          "Food and Drink",
+          "Restaurants",
+          "Coffee Shop"
+        ],
+        "category_id": "13005043",
+        "date": "2019-09-15",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "Starbucks",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "zNR9zB7epwtaMrALkD9xU9DM5XrvlDSob9LNV",
+        "transaction_type": "place"
+      },
+      {
+        "account_id": "Bp19kNQjEKtoLeRwEZVyUbQoqdP86EcwWLGJQ",
+        "amount": 89.4,
+        "category": [
+          "Food and Drink",
+          "Restaurants"
+        ],
+        "category_id": "13005000",
+        "date": "2019-09-14",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "SparkFun",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "Bp19kNQjEKtoLeRwEZVyUbQoJ1vzLQCwoP8Mp",
+        "transaction_type": "place"
+      },
+      {
+        "account_id": "33zdJVqR4XtgNM9jRE74sJRD7j51GVCqr8aNe",
+        "amount": -4.22,
+        "category": [
+          "Transfer",
+          "Credit"
+        ],
+        "category_id": "21005000",
+        "date": "2019-09-13",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "INTRST PYMNT",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "xa95KLPj1WUrXKgyPqdLinvG3zPlWvCnaoV4w",
+        "transaction_type": "special"
+      },
+      {
+        "account_id": "doj8ZepLv3FAkQMeW6gxTG7zXRLQ4oiZM63AQ",
+        "amount": 500,
+        "category": [
+          "Travel",
+          "Airlines and Aviation Services"
+        ],
+        "category_id": "22001000",
+        "date": "2019-09-03",
+        "iso_currency_code": "USD",
+        "location": {},
+        "name": "United Airlines",
+        "payment_meta": {},
+        "pending": false,
+        "transaction_id": "74dlXvBK75c3vjedEQM7HaE3rLNV8EUgkWnJg",
+        "transaction_type": "special"
+      }
+    ]
+  }
+}
