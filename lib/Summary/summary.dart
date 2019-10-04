@@ -80,7 +80,7 @@ Future fetchTransactionAnalysis(dynamic responseStr, BuildContext context)  asyn
 
   if(response.statusCode == 200) {
       debugPrint("returned transactional data" + response.body);
-       var dashBoard = Dashboard();
+       var dashBoard = Dashboard(response.body);
        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
         return dashBoard.build(context);
       }));
