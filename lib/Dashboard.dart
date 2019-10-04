@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'dart:convert';
+import 'package:link/link.dart';
 
 
 class Dashboard extends StatelessWidget {
@@ -113,12 +114,12 @@ class Dashboard extends StatelessWidget {
                             border: Border.all(color: Colors.grey,width: 0.6),
                               
                           ),
-                          child: Column(
+                          child: Link( child: Column(
                               children: <Widget>[
                                 SizedBox(height:40),
                                 Image.asset('assets/amerant.png'),
                                 SizedBox(height:10),
-                                  Padding(padding: EdgeInsets.all(8.0), child: Row(children: <Widget>[ Text("Checking Account Summary",style: TextStyle(fontSize: 18, color: Colors.grey),), Text("(last 24 months)",style: TextStyle(fontSize: 10, color: Colors.grey))],),),
+                                  Padding(padding: EdgeInsets.all(8.0), child: Row(children: <Widget>[ Text("Savings Account Summary",style: TextStyle(fontSize: 18, color: Colors.grey),), Text("(last 24 months)",style: TextStyle(fontSize: 10, color: Colors.grey))],),),
                                       
                                       Padding(padding: EdgeInsets.all(8.0), child: Row(children: <Widget>[Text("Gain \$"+recommendation2Gain, style:TextStyle(fontSize: 20, color: Colors.green, fontWeight: FontWeight.bold),)],),),
                                       
@@ -127,7 +128,10 @@ class Dashboard extends StatelessWidget {
                                       Padding(padding: EdgeInsets.all(8.0), child:Row(children: <Widget>[Text("Purchasing power \$"+recommendation2PurchasingPow, style:TextStyle(fontSize: 20, color: Colors.green),)],),),
                                       
                                       Padding(padding: EdgeInsets.all(8.0), child:Row(children: <Widget>[Text("Service Fee \$"+recommendation2ServiceFee, style:TextStyle(fontSize: 20, color: Colors.green),)],),),
-                                    ])
+                                    ]), url: 'https://www.simple.com/2percent',) 
+
+                          
+                          
                          );
                         },
                   );
