@@ -93,20 +93,27 @@ Future fetchTransactionAnalysis(dynamic responseStr, BuildContext context)  asyn
  @override 
   Widget build(BuildContext context) {
     _buildContext = context;
-    return MaterialApp(
-     home: Scaffold(
-       appBar: AppBar(
-         title: Text("Plaid API"),
-        ),
-        body: RaisedButton(
-          onPressed: () { this.showPlaidView(context); },
-          child: const Text(
-            'Plaid API',
-            style: TextStyle(fontSize: 20)
-          ),
-        ),
-     )
-    );
+    return Scaffold(
+      backgroundColor: Colors.indigo[900],
+      //  appBar: AppBar(
+      //    //title: Text("Plaid API"),
+      //    backgroundColor: Colors.indigo[900],
+      //   ),
+        body: Center( child :Column(mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
 
+                      ImageIcon(AssetImage('assets/Logo.png',), size: 200, color: Colors.red,),
+                    SizedBox(height: 100),
+                    RaisedButton(
+                        shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                        onPressed: () { this.showPlaidView(context); },
+                        child: const Text(
+                          'Start Saving',
+                          style: TextStyle(fontSize: 20, color: Colors.red)
+                        ),
+                      )
+                    ],)
+          ));
   }
 }
