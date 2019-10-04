@@ -1,6 +1,15 @@
-# finpal
+# finX
 
 A new Flutter project.
+
+FinX is a personal treasurer app. A system that analyzes interest rates, fees and transactions associated with individual / company accounts, and recommends alternative higher yield, no-fee deposit instruments that at least offset the inflation rate, to prevent the deterioration of wealth.
+
+Problem: Over the last ten years the inflation rate was on average 2%, while most banks offered close to 0% interest on deposits, in addition to charging high maintenance fees, which translates into 20% loss of purchasing power.
+
+Customers: There are 1 billion deposit accounts, which are associated with at least 300 million unique customers that have in excess of 13 trillion US dollars in deposits across 5.000 banks in the USA.
+
+Contact support finx.apps@gmail.com
+
 
 ## Getting Started
 
