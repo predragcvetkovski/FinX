@@ -1,6 +1,6 @@
 Flask==0.10.1
 Flask-RESTful==0.2.12
-gunicorn==19.0.0
+gunicorn==19.5.0
 pandas
 numpy
 SciPy
